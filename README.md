@@ -1,140 +1,134 @@
- Video Game Sales Analysis & Feature Selection (Machine Learning Project)
+Game Sales Data Analysis
 
-This repository contains a complete data preprocessing and feature-selection workflow applied to a video-game sales dataset. The project includes:
+This repository contains a complete exploratory data analysis (EDA) and preprocessing workflow applied to a videogame sales dataset. The notebook, game scales.ipynb, walks through data loading, statistical analysis, missing value treatment, outlier detection, feature encoding, and data visualization.
 
-Exploratory Data Analysis (EDA)
+📌 Project Overview
 
-Handling missing values
-
-One-Hot Encoding for categorical variables
-
-Feature selection using SelectKBest
-
-Visualisation of numeric features
-
-Python script + Jupyter Notebook
-
-📂 Project Structure
-├── data/
-│   └── game_sales.csv
-├── notebooks/
-│   └── game_sales.ipynb
-├── scripts/
-│   └── feature_selection.py
-└── README.md
-
-🧠 Project Description
-
-This project analyses a video-game sales dataset containing information such as:
-
-Game name
-
-Platform
-
-Genre
-
-Publisher
-
-Sales in NA, EU, JP, Other regions
-
-Critic Score
-
-User Score
-
-The purpose is to:
-
-Preprocess the dataset
-
-Convert categorical columns using OneHotEncoder
-
-Select the most important features using SelectKBest (f_regression)
-
-Visualise numeric data trends
-
-📊 Key Features
-✔️ Exploratory Data Analysis (EDA)
-
+The goal of this project is to understand the structure of a game sales dataset and prepare it for future machine learning tasks.
 The notebook includes:
 
-Distribution plots
+Importing necessary Python libraries
 
-Category counts
+Reading and inspecting the dataset
 
-Correlation heatmaps
+Performing descriptive and statistical analysis
 
-Missing value checks
+Handling missing values and duplicate rows
 
-✔️ Data Preprocessing
+Detecting and treating outliers
 
-Label encoding
+Checking skewness and kurtosis
 
-One-hot encoding of non-numeric columns
+Visualizing numerical and categorical variables
 
-Handling missing values
+Applying Label Encoding and One-Hot Encoding
 
-Converting object columns to numeric
+This project is useful for anyone learning data cleaning, feature engineering, or basic EDA using Python.
 
-✔️ Feature Selection
+📂 File Description
+game scales.ipynb
 
-Using Scikit-Learn:
+A Jupyter Notebook that includes:
 
-selector = SelectKBest(score_func=f_regression, k=10)
-X_selected = selector.fit_transform(X_encoded, y)
+Importing Python Libraries
 
-✔️ Plotting All Numeric Columns
-numeric_cols = df.select_dtypes(include=['int64', 'float64']).columns
+Pandas, NumPy, Matplotlib, Seaborn
 
-for col in numeric_cols:
-    plt.figure(figsize=(10, 5))
-    plt.plot(df[col], label=col)
-    plt.title(col)
-    plt.xlabel("Index")
-    plt.ylabel("Value")
-    plt.legend()
-    plt.show()
+Scikit-learn preprocessing utilities
+
+SciPy statistics tools
+
+Reading the Dataset
+
+Loading CSV data
+
+Viewing first rows & basic structure
+
+Statistical Analysis
+
+Summary statistics
+
+Distribution checks
+
+Handling Missing Values
+
+Imputation strategies
+
+Null counts
+
+Handling Duplicate Rows
+
+Outlier Detection & Treatment
+
+Z-score or IQR method
+
+Visual Analysis
+
+Histograms, boxplots, line plots
+
+Genre-wise / sales-wise comparisons
+
+Skewness & Kurtosis Calculation
+
+Encoding Techniques
+
+Label Encoding
+
+One-Hot Encoding
+
+The notebook is structured in clear sections for easy understanding.
 
 🛠️ Technologies Used
 
-Python
+Python 3.x
 
-Pandas
+Pandas – data manipulation
 
-NumPy
+NumPy – numerical operations
 
-Scikit-Learn
+Matplotlib & Seaborn – visualization
 
-Matplotlib
+Scikit-learn – preprocessing & feature engineering
 
-Jupyter Notebook
+SciPy – statistical computation
 
-🚀 How to Run This Project
-1️⃣ Clone the repo
-git clone https://github.com/your-username/game-sales-analysis.git
-cd game-sales-analysis
+📊 Sample Tasks Performed
 
-2️⃣ Install dependencies
-pip install -r requirements.txt
+Cleaning and preparing game sales data
 
-3️⃣ Run the Jupyter notebook
-jupyter notebook
+Understanding patterns in sales based on region, genre, and platform
 
-4️⃣ Run the Python script
-python scripts/feature_selection.py
+Visualizing numerical features
 
-📈 Results
+Encoding categorical variables for ML-readiness
 
-Successfully transformed categorical data with OneHotEncoder
+🚀 How to Use
 
-Selected top k=10 most important features
+Clone the repository
 
-Generated visualisations for all numeric columns
+Install dependencies (optional: pip install -r requirements.txt)
 
-Clean and processed dataset ready for machine-learning models
+Open the notebook:
+
+jupyter notebook "game scales.ipynb"
+
+
+Run the cells sequentially
+
+📈 Future Improvements
+
+Add machine learning models for sales prediction
+
+Build dashboards for interactive insights
+
+Automate preprocessing pipeline
 
 📜 License
 
-This project is licensed under the MIT License.
+This project is for learning and educational purposes.
+You may modify and use it freely.
 
-🤝 Contributions
-
-Pull requests and suggestions are welcome!
+If you want, I can also generate:
+✅ A requirements.txt file
+✅ A dataset description section
+✅ A more advanced README with images & badges 
